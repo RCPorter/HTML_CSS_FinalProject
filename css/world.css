@@ -1,0 +1,70 @@
+
+@import url(basic.css);
+@import url(print.css);
+
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Regions Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   world.css
+
+*/
+
+/*Realm List Styles*/
+section#realm_List {
+      width: 100%;
+}
+
+section#realm_List > ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+section#realm_List > ul > li {
+      font-weight: bold;
+}
+
+section#realm_List > ul > li > ul {
+      margin-left: 2em;
+}
+
+section#realm_List ul li ul ol li{
+      margin-left: 3em;
+}
+
+ul > li > ul > li{
+      list-style-image: url(../images/sword_Icon.png);
+}
+
+ol {
+      list-style: lower-roman;
+      list-style-position: outside;
+      font-weight: normal;
+      font-size:.8em;
+}
+
+/*Inline Text Styles*/
+em {
+      text-decoration: underline;
+      font-weight: bolder;
+      font-size: larger;
+}
+
+/*Image Styles*/
+
+figure img {
+      border-radius: 25px;
+  }
+
+/*Print Styles*/
+@media print {
+      ul > li > ul > li{
+            list-style-image: none;
+      }
+}

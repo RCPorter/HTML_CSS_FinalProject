@@ -1,0 +1,152 @@
+
+@import url(basic.css);
+@import url(print.css);
+
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Join Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   join.css
+
+*/
+
+/*Form Styles*/
+form {
+      display: flex;
+      width: 98%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+}
+
+/*Fieldset Styles*/
+fieldset {
+      width: 90%;
+      margin: 10px auto;
+      background-color: rgb(228, 212, 191);
+      box-shadow: 2px 2px 4px black;
+}
+
+/*Survey Info Styles*/
+div#survey_Info {
+      width: 95%;
+}
+
+/*Form Row Styles*/
+div.form_Row, div.rad_Row {
+      padding: 10px;
+      border-bottom: double rgba(20, 124, 194, 0.459);
+}
+
+
+fieldset div.form_Row:last-of-type {
+      border-bottom: none;
+}
+
+/*Text Input Styles*/
+input#name, input#phone, input#email {
+      width: 70%;
+      float: right;
+}
+
+/*Form Legend Styles*/
+form legend {
+      padding: 10px 15px;
+      background-image: linear-gradient(to right, rgb(93,40,34) ,rgb(207,91,42) 10%, rgb(207,91,42) 90%, rgb(93,40,34));
+      box-shadow: 2px 2px 4px black;
+}
+
+/*Radio Button Styles*/
+div.rad_Row {
+      padding-bottom: 30px;
+}
+
+div.rad {
+      float: right;
+}
+
+/*Form Button Styles*/
+div#form_Buttons input {
+      background-color: rgb(201, 169, 128);
+      padding: 10px 3em;
+      margin: 1em auto;
+      border: none;
+      font-family: Lobster, Tahoma, Geneva, sans-serif;
+      color: rgb(12, 161, 224);
+      transition: .75s;
+      font-size: larger;
+}
+
+div#form_Buttons input:hover {
+      font-weight: bold;
+      background-color: rgb(202, 137, 52);
+      padding: 15px 3.2em;
+      text-shadow: 4px 4px 4px black;
+}
+
+div#form_Buttons input:active {
+      font-weight: bolder;
+      text-shadow: 2px 2px 4px black;
+}
+
+/*Full Screen Styles*/
+@media only screen and (min-width: 60rem) {
+
+      fieldset {
+            width: 45%;
+      }
+}
+
+/*Phone Styles*/
+@media only screen and (max-width: 640px) {
+
+      fieldset {
+            width: 100%;
+      }
+
+      textarea {
+            width: 95%;
+      }
+
+      div#survey_Info {
+            text-align: center;
+            margin: 10px auto;
+            line-height: 110%;
+      }
+
+      div.form_Row, div.rad_Row {
+            padding: 1em 0;
+            line-height: 1.2em;
+      }
+
+      div#form_Buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+      }
+
+      div#form_Buttons input {
+            margin: 0 auto;
+            width: 60%;
+      }
+}
+
+/*Print Styles*/
+@media print {
+      fieldset:last-of-type{
+            page-break-before: always;
+        }
+
+      div#form_Buttons {
+            display: none;
+      }
+
+      input::placeholder{
+            color: rgba(255, 255, 255, 0.281);
+      }
+}

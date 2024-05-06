@@ -1,0 +1,119 @@
+
+@import url(basic.css);
+@import url(print.css);
+
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Schedule Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   schedule.css
+
+*/
+
+/*Aside Style*/
+aside {
+      max-width: 95%;
+  }
+
+
+/*General Table Styles*/
+table {
+      border: 5px outset rgb(93,40,34);
+      box-shadow: 0 0 1em rgb(90, 31, 8);
+      width: 95%;
+      margin-top: .5em;
+      border-collapse: collapse;
+}
+
+table th, table td {
+      border: 2px solid rgb(93,40,34);
+      padding: .5em;
+      text-align: center;
+}
+
+table td {
+      line-height: 1em;
+}
+
+table tr th {
+      text-decoration: underline;
+}
+
+table#large tr:nth-of-type(odd) th, table#small tr:nth-of-type(odd) {
+      background-color: rgba(153, 84, 4, 0.25);
+}
+
+table tr.top_Row th{
+      background-image: radial-gradient(rgb(207,91,42), rgb(207,91,42) 80%, rgb(93,40,34));
+}
+
+/*Table Footer Styles*/
+table tfoot tr td {
+      font-size: small;
+}
+
+table tr td.open {
+      background-color: rgba(5, 68, 14, 0.25);
+}
+
+table tr td.closed {
+      background-color: rgba(90, 8, 8, 0.25);
+}
+
+/*Table Caption Styles*/
+table > caption {
+      caption-side: bottom;
+      text-align: right;
+      color: rgb(88, 19, 15);
+      margin-top: 10px;
+}
+
+/*Large Table Style*/
+table#large tbody tr th {
+      width: 1.5em;
+}
+
+/*Small Table Style*/
+table#small{
+      display: none;
+      max-width: 97%;
+}
+
+table#small caption {
+      text-align: center;
+      line-height: 1.1em;
+      margin-bottom: .2em;
+      padding: 10px 0px;
+}
+
+/*Phone Styles*/
+@media only screen and (max-width: 740px){
+
+      table#large {
+            display: none;
+      }
+
+      table#small {
+            display: block;
+      }
+
+}
+
+/*Print Styles*/
+@media print {
+      table {
+            border: .001in;
+            border-style: solid;
+            border-color: gray;
+            box-shadow: none;
+      }
+
+      table caption{
+            color: gray;
+      }
+}

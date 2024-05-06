@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/*Fonts*/
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster.ttf) format('truetype');
+}
+@font-face {
+    font-family: Lugrasimo;
+    src: url(../fonts/Lugrasimo.ttf) format('truetype');
+}
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Basic Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   basic.css
+
+*/
+
+/*HTML Background*/
+html {
+    background-image: linear-gradient( to left, rgb(93,40,34), rgb(170, 99, 89), rgb(93,40,34));
+}
+
+/*Body Styles*/
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+    background-color:rgb(208,190,166);
+    min-width: 320px;
+    max-width: 1020px;
+    width: 95%;
+}
+
+body > * {
+    font-size: 140%;
+    font-family: Lugrasimo, 'Platino Linotype', 'Book Antiqua', Platino, serif;
+    line-height: 1.2em;
+}
+
+body img 
+{
+    box-shadow: 0 0 1em rgb(93,40,34);
+    margin: auto;
+    width: 100%;
+}
+
+/*Header Styles*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
+    align-content: center;
+}
+
+header > img#banner {
+    width: 100%;
+}
+
+/*Horizontal Navigation Style*/
+a#navicon {
+    display: none;
+    width: 32px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav.horizontal ul li {
+    line-height: 1.5em;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    width: 20%;
+    background-color: rgb(201, 169, 128);
+    transition: .75s;
+}
+
+nav.horizontal ul li:hover {
+    background-color: rgb(202, 137, 52);
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #000000;
+}
+
+/*Paragraph Styles*/
+p {
+    text-align: center;
+    margin: 10px auto;
+    line-height: 1.5em;
+    letter-spacing: -.1em;
+}
+
+p > a {
+    letter-spacing: .1em;
+}
+
+p > a:visited {
+    letter-spacing: .1em;
+}
+
+/*Heading Styles*/
+h1, h2 {
+    font-family: Lobster, Tahoma, Geneva, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5em;
+    margin: 10px auto;
+    color: rgb(56,35,30);
+    max-width: 40rem;
+    background-image: linear-gradient(to right, rgb(93,40,34) ,rgb(207,91,42) 10%, rgb(207,91,42) 90%, rgb(93,40,34));
+}
+
+h1 {
+    padding: .5em 2em;
+    min-width: 50%;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #cececeb4;
+}
+
+h2 {
+    margin-top: 1.2em;
+    font-weight: light;
+    font-size: 1.6em;
+}
+
+
+/*Section Styles*/
+section {
+    max-width: 60rem;
+}
+
+/*Inline Text Styles*/
+em {
+    font-weight: bold;
+    color: rgb(59,19,17);
+    letter-spacing: .05em;
+}
+
+/*Link Styles*/
+a {
+    text-decoration: none;
+    font-family: Lobster, Tahoma, Geneva, sans-serif;
+    color: rgb(12, 161, 224);
+}
+
+a:visited {
+    color: rgb(29, 119, 253);
+}
+
+/*Paragraph & Footer Link Styles*/
+p > a , footer > a {
+    transition: .75s; 
+}
+
+p > a:hover, footer > a:hover {
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #000000;
+    transition: 0s;
+}
+
+p > a:active, footer > a:active {
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/*Footer Styles*/
+footer {
+    font-size: 1.2em;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgb(178,146,107);
+}
+
+/*Cell Phone Styles*/
+@media only screen and (max-width: 640px) {
+    /*Horizontal Navigation Style*/
+    a#navicon {
+        display: block;
+    }
+
+    nav.horizontal ul{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        max-width: 240px;
+        z-index: 1;
+        box-shadow: 5px 5px 5px rgb(56,35,30);
+    }
+
+    nav.horizontal ul li {
+        width: 100%;
+        border-bottom: solid black;
+    }
+
+    nav.horizontal ul li:first-of-type {
+        border-top: solid black;
+    }
+
+    a#navicon:hover+ul, nav.horizontal ul:hover {
+        display: block;
+    }
+
+    img#menu_Button:hover nav.horizontal {
+        display: block;
+    }
+    
+    /*Heading Styles*/
+    h1 {
+        font-size: 2em;
+        width: 100%;
+    }
+}
+
+/*Full Screen Styles*/
+@media only screen and (min-width: 60rem) {
+
+    /*Heading Styles*/
+    h1 {
+        margin: 10px auto;
+        color: rgb(59,19,17);
+        font-weight: bold;
+        padding: 0 2em;
+        background-image: radial-gradient(rgb(220,91,42) 25%, rgb(194, 69, 19));
+        border-color: rgba(13,174,242,.5);
+        border-style: groove;
+        border-width: 10px;
+        border-radius: 25%;
+        box-shadow: 5px 5px 5px rgb(56,35,30);
+    }
+
+    /*Column Styles*/
+    div.columns {
+        display: flex;
+    }
+
+}

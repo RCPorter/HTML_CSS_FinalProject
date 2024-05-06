@@ -1,0 +1,51 @@
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Print Style Sheets
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   print.css
+
+*/
+
+@media print {
+    body * {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: normal;
+        font-size: medium;
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        page-break-before: always;
+        font-size: large;
+        text-decoration: underline;
+    }
+
+    a {
+        color: gray;
+    }
+
+    a:visited {
+        color: gray;
+    }
+
+    img {
+        width: 2in;
+        filter: grayscale(1);
+    }
+
+    em {
+        color: gray;
+    }
+
+    @page {
+        margin: 0.25in;
+    }
+}

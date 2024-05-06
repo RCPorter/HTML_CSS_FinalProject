@@ -1,0 +1,49 @@
+
+@import url(basic.css);
+@import url(print.css);
+
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Creator Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   creator.css
+
+*/
+
+article img {
+      display: block;
+      width: 70%;
+      align-items: center;
+}
+
+/*Full Screen Styles*/
+@media only screen and (min-width: 60rem){
+      p {
+            width: 45%;
+      }
+}
+
+/*Print Styles*/
+@media print {
+
+      article {
+            display: flex;
+      }
+
+      h2 {
+            width: 100%;
+      }
+
+      article img {
+            width: 40%;
+      }
+
+      article p{
+            width: 60%;
+      }
+}

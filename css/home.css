@@ -1,0 +1,101 @@
+
+@import url(basic.css);
+@import url(print.css);
+
+/*
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Home Style Sheet
+      Author:  Robert Porter
+      Date:       7/21/23
+
+      Filename:   home.css
+
+*/
+
+/*Body Styles*/
+body img 
+{
+    box-shadow: 0 0 1em rgb(93,40,34);
+    margin: auto;
+    width: 100%;
+}
+
+/*Figure Styles*/
+figure {
+    margin-top: 1em;
+    justify-content: center;
+}
+
+figure img {
+    border-radius: 25px;
+}
+
+figcaption {
+    margin-top: .5em;
+}
+
+/*Article Styles*/
+article {
+    max-width: 95%;
+}
+
+/*Aside Styles*/
+aside {
+    max-width: 95%;
+}
+
+/*Video Styles*/
+div#video iframe {
+    display: none;
+}
+
+div#video a, div#video p {
+    display: block;
+}
+
+div#video a {
+    margin: 0 auto;
+    width: 64px;
+}
+div#video p {
+    font-size: small;
+    opacity: 75%;
+}
+
+/*Full Screen Styles*/
+@media only screen and (min-width: 60rem) {
+    
+    div#video {
+        position: relative;
+        padding-bottom: 56.25%;
+    }
+    
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    div#video iframe{
+        display: block;
+    }
+    
+    div#video a, div#video p {
+        display: none;
+    }
+}
+
+/*Print Styles*/
+@media print {
+    div#video {
+        display: none;
+    }
+    section#world_Map {
+        width: 65%;
+    }
+}

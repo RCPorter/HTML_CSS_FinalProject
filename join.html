@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+      CIS.1350.5T3 Web Dev HTML & CSS
+      Final Project
+      
+      Grathia Campaign
+      Join
+      Author: Robert Porter
+      Date:   7/21/23
+
+      Filename:   join.html
+
+   -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="keywords" content="D&D, 5e, Grathia, Campaign" />
+   <title>Grathia Campaign: Join</title>
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/join.css" />
+   <script src="scripts/rb_formsubmit.js"></script>
+</head>
+
+<body>
+   <header>
+      <img id="banner" src="images/grathia_Banner.png" alt="Grathia: Age of Grace Map">
+      <nav class="horizontal">
+         <a id="navicon" href="#"><img src="images/menu_Button.png" alt=""></a>
+         <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="creator.html">Creator</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="world.html">World</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <h1>Sign Up</h1>
+   
+   <div id="survey_Info">
+      This Survey is Private and Confidential. We will <em>NOT</em> share your information with third parties.
+      <br><br>
+      Required Values are marked by an asterisk (*).
+   </div>
+   <form id="sign_Up" action="http://www.example.com/grathia/survey" method="post">
+      <fieldset id="gen_Info">
+         <legend>Player Info</legend>
+
+         <div class="form_Row">
+            <label for="name">*Name</label>
+            <input type="text" name="name" id="name" placeholder="first and last name" required>
+         </div>
+
+         <div class="form_Row">
+            <label for="phone">Phone #</label>
+            <input type="tel" name="phone" id="phone" placeholder="(nnn) nnn-nnnn">
+         </div>
+
+         <div class="form_Row">
+            <label for="email">*E-Mail</label>
+            <input type="email" name="email" id="email" placeholder="example@page.com" required>
+         </div>
+
+         <div class="rad_Row">
+            Do you have a Party? <br/>
+            <div class="rad">
+               <label for="pYes">Yes</label>
+               <input type="radio" name="party" id="pYes">
+               <label for="pNo">No</label>
+               <input type="radio" name="party" id="pNo">
+            </div>
+         </div>
+
+         <div class="rad_Row">
+            Are you willing to join a Party? <br/>
+            <div class="rad">
+               <label for="jYes">Yes</label>
+               <input type="radio" name="party" id="jYes">
+               <label for="jNo">No</label>
+               <input type="radio" name="party" id="jNo">
+            </div>
+         </div>
+
+         <div class="form_Row">
+            <input type="checkbox" name="age" id="age" value="yes" required>
+            <label for="age">*Are you at least 18 years old?</label>
+         </div>
+      </fieldset>
+
+      <fieldset id="options">
+         <legend>Other Info</legend>
+
+         <div class="rad_Row">         
+            Are you an Experienced Player? <br/>
+            <div class="rad">
+               <label for="xYes">Yes</label>
+               <input type="radio" name="party" id="xYes">
+               <label for="xNo">No</label>
+               <input type="radio" name="party" id="xNo">
+            </div>
+         </div>
+
+         <div class="form_Row">
+            <input type="checkbox" name="mail" id="mail" value="yes">
+            <label for="mail">Would you like to recieve E-Mails with updates and special offers?</label>
+         </div>
+
+        <div class="form_Row">
+            <input type="checkbox" name="text" id="text" value="yes">
+            <label for="text">Would you like to recieve Texts with updates and special offers?</label>
+        </div>
+
+         <div class="form_Row">
+            <label for="hear">How did you hear about us?</label>
+            <textarea name="hear" id="hear" cols="55" rows="6"></textarea>
+         </div>
+      </fieldset>
+      
+      <div id="form_Buttons">
+         <input type="submit" value="Submit">
+         <input type="reset" value="Cancel">
+      </div>
+   </form>
+
+   <footer>
+      This Page was created by Robert Porter for CIS.1250 HTML & CSS at <a href="https://www.sinclair.edu">Sinclair Community College</a>
+      July 2023
+      <br />||Banner Photo by <a href="https://unsplash.com/@abrizgalov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Artem Bryzgalov</a> on <a href="https://unsplash.com/photos/jJ5b9rmCt0c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>||
+      <br />||Menu Icon by <a target="_blank" href="https://icons8.com/icon/118991/menu">Hamburger Menu</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>||
+   </footer>
+</body>
